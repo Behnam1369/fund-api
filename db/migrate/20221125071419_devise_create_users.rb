@@ -14,9 +14,9 @@ class DeviseCreateUsers < ActiveRecord::Migration[7.0]
       ## Rememberable
       t.datetime :remember_created_at
 
-      t.float :investment
-      t.float :confirmed_balance
-      t.float :unconfirmed_balance
+      t.float :investment, default: 0.0
+      t.float :calculated_profit, default: 0.0
+      t.float :pending_profit, default: 0.0
 
       ## Trackable
       # t.integer  :sign_in_count, default: 0, null: false
