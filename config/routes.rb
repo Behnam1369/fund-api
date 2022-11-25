@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :rates
+  resources :transactions
+  resources :assets
   resources :investments
     devise_for :users,
              controllers: {
