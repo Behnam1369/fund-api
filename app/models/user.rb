@@ -8,7 +8,7 @@ class User < ApplicationRecord
 
   def invest(amount)
     self.investment += amount
-    self.save
+    save
     total = User.sum(:investment) + User.sum(:calculated_profit)
     User.all.each do |user|
       user.share = (user.investment + user.calculated_profit) / total
@@ -17,6 +17,6 @@ class User < ApplicationRecord
   end
 
   def balance
-    self.investment + self.calculated_profit + self.pending_profit
+    self.investment + calculated_profit + pending_profit
   end
 end

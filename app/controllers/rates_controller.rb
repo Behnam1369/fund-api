@@ -1,5 +1,5 @@
 class RatesController < ApplicationController
-  before_action :set_rate, only: %i[ show update destroy ]
+  before_action :set_rate, only: %i[show update destroy]
 
   # GET /rates
   def index
@@ -39,13 +39,14 @@ class RatesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_rate
-      @rate = Rate.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def rate_params
-      params.require(:rate).permit(:asset_id, :price, :date)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_rate
+    @rate = Rate.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def rate_params
+    params.require(:rate).permit(:asset_id, :price, :date)
+  end
 end

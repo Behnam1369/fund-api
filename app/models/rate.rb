@@ -6,8 +6,8 @@ class Rate < ApplicationRecord
   def update_pending_profit
     cash = Investment.sum(:amount) - Transaction.sum(:amount)
 
-    ass = Asset.find_by(id: self.asset.id)
-    ass.price = self.price
+    ass = Asset.find_by(id: asset.id)
+    ass.price = price
     ass.amount = ass.qty * ass.price
     ass.save
 

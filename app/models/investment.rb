@@ -13,7 +13,7 @@ class Investment < ApplicationRecord
   end
 
   def update_user_investment
-    self.user.invest(amount)
+    user.invest(amount)
     total = User.sum(:investment) + User.sum(:calculated_profit)
     User.all.each do |user|
       user.share = (user.investment + user.calculated_profit) / total

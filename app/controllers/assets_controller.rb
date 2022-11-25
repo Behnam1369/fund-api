@@ -1,5 +1,5 @@
 class AssetsController < ApplicationController
-  before_action :set_asset, only: %i[ show update destroy ]
+  before_action :set_asset, only: %i[show update destroy]
 
   # GET /assets
   def index
@@ -39,13 +39,14 @@ class AssetsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_asset
-      @asset = Asset.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def asset_params
-      params.require(:asset).permit(:title)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_asset
+    @asset = Asset.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def asset_params
+    params.require(:asset).permit(:title)
+  end
 end
