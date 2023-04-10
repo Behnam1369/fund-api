@@ -151,3 +151,9 @@ Rate.create(asset: pelask, price: 5571, date: '2023-04-05')
 Rate.create(asset: kerman, price: 1466, date: '2023-04-05')
 Rate.create(asset: dey, price: 1119, date: '2023-04-05')
 Rate.create(asset: dana, price: 3470, date: '2023-04-05')
+
+# Farvardin 21
+Transaction.create(asset: dana, qty: -65_054, amount: -263_278_065, date: '2023-04-10')
+Rate.create(asset: pelask, price: 5970, date: '2023-04-10')
+Rate.create(asset: kerman, price: 1535, date: '2023-04-10')
+Rate.create(asset: dey, price: 1137, date: '2023-04-10')
