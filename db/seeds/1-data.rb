@@ -157,3 +157,10 @@ Transaction.create(asset: dana, qty: -65_054, amount: -263_278_065, date: '2023-
 Rate.create(asset: pelask, price: 5970, date: '2023-04-10')
 Rate.create(asset: kerman, price: 1535, date: '2023-04-10')
 Rate.create(asset: dey, price: 1137, date: '2023-04-10')
+Investment.create(amount: -54_958_362, date: '2023-04-10', user: amir_hosein)
+Investment.create(amount: -208_319_817, date: '2023-04-10', user: naghmeh)
+
+# Farvardin 26
+Rate.create(asset: pelask, price: 6100, date: '2023-04-15')
+Rate.create(asset: kerman, price: 1605, date: '2023-04-15')
+Rate.create(asset: dey, price: 1148, date: '2023-04-15')
