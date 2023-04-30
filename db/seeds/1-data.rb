@@ -24,6 +24,7 @@ amir_ebrahim = User.create(email:'a18@b.c', full_name: 'امیر ابراهیم 
 sara = User.create(email:'a19@b.c', full_name: 'سارا حضرتیان', password: '123456')
 sedigheh = User.create(email:'a22@b.c', full_name: 'صدیقه قزلباش', password: '123456')
 shahram = User.create(email:'a23@b.c', full_name: 'شهرام گودرزی', password: '123456')
+zhynura = User.create(email:'a24@b.c', full_name: 'ژینورا', password: '123456')
 
 # Assets
 puts 'Defining assets ...'
@@ -66,8 +67,8 @@ Transaction.create(asset: pelask, qty: 107_126, amount: 335_875_362, date: '2022
 Transaction.create(asset: khavar, qty: -536_696, amount: -999_045_436, date: '2022-04-27')
 
 # Ordibehesht 12
-Rate.create(asset: khavar, price: 1863, date: '2022-05-17')
-Rate.create(asset: pelask, price: 3262, date: '2022-05-17')
+Rate.create(asset: khavar, price: 1863, date: '2022-05-02')
+Rate.create(asset: pelask, price: 3262, date: '2022-05-02')
 Investment.create(amount: -70_000_000, date: '2022-05-02', user: naghmeh)
 
 # Ordibehesht 28
@@ -117,6 +118,13 @@ Investment.create(amount: 26_251_731, date: '2023-01-18', user: behnam)
 
 # Bahman 3
 Transaction.create(asset: dey, qty: 41_987, amount: 37_251_312, date: '2023-01-23')
+
+# Bahman 10
+Rate.create(asset: pelask, price: 3629, date: '2023-01-30')
+Rate.create(asset: kerman, price: 1269, date: '2023-01-30')
+Rate.create(asset: dey, price: 856, date: '2023-01-30')
+Investment.create(amount: 36_000_000, date: '2023-01-30', user: zhynura)
+Transaction.create(asset: dey, qty: 41_516, amount: 36_000_100, date: '2023-01-30')
 
 # Esfand 22
 Rate.create(asset: pelask, price: 4128, date: '2023-01-17')
@@ -184,13 +192,23 @@ Rate.create(asset: dey, price: 1306, date: '2023-04-18')
 Investment.create(amount: 30_000_000, date: '2023-04-18', user:masoumeh )
 Transaction.create(asset: deloghma, qty: 12_940, amount: 50_596_904, date: '2023-04-18')
 
-#ordibehesht 4
-Rate.create(asset: pelask, price: 6700, date: '2023-04-248')
+# Ordibehesht 4
+Rate.create(asset: pelask, price: 6700, date: '2023-04-24')
 Rate.create(asset: kerman, price: 1747, date: '2023-04-24')
 Rate.create(asset: dey, price: 1368, date: '2023-04-24')
 Rate.create(asset: deloghma, price: 3810, date: '2023-04-24')
 Investment.create(amount: 15_000_000, date: '2023-04-24', user:selena )
-Investment.create(amount: 28_716_683, date: '2023-04-24', user:naghmeh )
-Investment.create(amount: 111_184_222, date: '2023-04-24', user:shahram )
+Investment.create(amount: 8_000_000, date: '2023-04-24', user:arian )
 Transaction.create(asset: deloghma, qty: 3_970, amount: 14_994_562, date: '2023-04-24')
-Transaction.create(asset: deloghma, qty: 37_520, amount: 194_638_360, date: '2023-04-24')
+
+# Ordibehesht 9
+Rate.create(asset: pelask, price: 6580, date: '2023-04-29')
+Rate.create(asset: kerman, price: 1767, date: '2023-04-29')
+Rate.create(asset: dey, price: 1544, date: '2023-04-29')
+Rate.create(asset: deloghma, price: 4050, date: '2023-04-29')
+Investment.create(amount: 36_000_000, date: '2023-04-29', user: zhynura)
+Investment.create(amount: 30_634_782, date: '2023-04-29', user:naghmeh )
+Investment.create(amount: 58_393_583, date: '2023-04-29', user:maman_bozorg )
+Investment.create(amount: 118_610_649, date: '2023-04-29', user:shahram )
+Transaction.create(asset: dey, qty: 41_516, amount: 36_000_100, date: '2023-04-29')
+Transaction.create(asset: ghegol, qty: 37_520, amount: 207_639_014, date: '2023-04-29')
