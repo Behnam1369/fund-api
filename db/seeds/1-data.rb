@@ -37,6 +37,7 @@ dana = Asset.create(title: 'دانا')
 energy3 = Asset.create(title: 'انرژی 3')
 deloghma = Asset.create(title: 'دلقما')
 ghegol = Asset.create(title: 'غگل')
+kegol = Asset.create(title: 'کگل')
 
 
 # Operations
@@ -210,5 +211,8 @@ Investment.create(amount: 32_000_000, date: '2023-04-29', user: zhynura)
 Investment.create(amount: 30_634_782, date: '2023-04-29', user:naghmeh )
 Investment.create(amount: 58_393_583, date: '2023-04-29', user:maman_bozorg )
 Investment.create(amount: 118_610_649, date: '2023-04-29', user:shahram )
-Transaction.create(asset: dey, qty: 5_039, amount: 40_006_435, date: '2023-04-29')
+Transaction.create(asset: kegol, qty: 5_039, amount: 40_006_435, date: '2023-04-29')
 Transaction.create(asset: ghegol, qty: 37_520, amount: 207_639_014, date: '2023-04-29')
+Rate.create(asset: kegol, price: 7890, date: '2023-04-29')
+Rate.create(asset: ghegol, price: 5580, date: '2023-04-29')
+
