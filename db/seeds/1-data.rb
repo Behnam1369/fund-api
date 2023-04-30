@@ -1,3 +1,38 @@
+# functions 
+
+def total_equity
+  (User.all.sum(:investment) + User.all.sum(:calculated_profit) + User.all.sum(:pending_profit)).round()
+end
+
+def total_assets
+  Asset.all.sum(:amount).round()
+end
+
+def total_investments
+  Investment.sum(:amount).round()
+end
+
+def total_transactions
+  Transaction.sum(:amount).round()
+end
+
+def cash
+  (total_investments - total_transactions).round()
+end
+
+def thousandSeprator(number)
+  number.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse
+end
+
+def print_log(shamsi_date)
+  puts "Date: #{shamsi_date}"
+  puts "Total Equity: #{thousandSeprator(total_equity)}"
+  puts "Total Assets: #{thousandSeprator(total_assets)}"
+  puts "Cash: #{thousandSeprator(cash)}"
+  puts "---------------------------------"
+end
+
+
 # Users
 puts 'Defining users ...'
 
@@ -83,6 +118,8 @@ Transaction.create(asset: kerman, qty: 1_312_364, amount: 1_103_755_304, date: '
 Rate.create(asset: pelask, price: 2784, date: '2022-11-05')
 Rate.create(asset: kerman, price: 657, date: '2022-11-05')
 
+print_log('1401/08/04')
+
 # Aban 14
 Transaction.create(asset: pelask, qty: -60_000, amount: -165_688_992, date: '2022-11-05')
 
@@ -91,6 +128,9 @@ Investment.create(amount: -20_145_120, date: '2022-11-07', user: massi)
 Investment.create(amount: -24_724_316, date: '2022-11-07', user: mahta)
 Investment.create(amount: -46_785_643, date: '2022-11-07', user: mahroo)
 Investment.create(amount: -58_344_920, date: '2022-11-07', user: amir_arsalan)
+Investment.create(amount: -15_906_678, date: '2022-11-07', user: behnam)
+
+print_log('1401/08/14')
 
 #Azar 19
 Rate.create(asset: pelask, price: 3508, date: '2022-12-10')
@@ -99,16 +139,21 @@ Rate.create(asset: kerman, price: 808, date: '2022-12-10')
 Investment.create(amount: -24_960_027, date: '2022-12-10', user: somayeh_gh)
 Investment.create(amount: 24_960_027, date: '2022-12-10', user: behnam)
 
+print_log('1401/09/18')
 
 #Dey 23
 Rate.create(asset: pelask, price: 4413, date: '2023-01-13')
 Rate.create(asset: kerman, price: 1103, date: '2023-01-13')
+
+print_log('1401/10/23')
 
 #Dey 27
 Rate.create(asset: pelask, price: 4625, date: '2023-01-17')
 Rate.create(asset: kerman, price: 1160, date: '2023-01-17')
 
 Investment.create(amount: 5_000_000, date: '2023-01-17', user: masoumeh)
+
+print_log('1401/10/27')
 
 #Dey 28
 Rate.create(asset: pelask, price: 4512, date: '2023-01-17')
@@ -117,8 +162,12 @@ Rate.create(asset: kerman, price: 1210, date: '2023-01-17')
 Investment.create(amount: 6_000_000, date: '2023-01-18', user: arian)
 Investment.create(amount: 26_251_731, date: '2023-01-18', user: behnam)
 
+print_log('1401/10/28')
+
 # Bahman 3
 Transaction.create(asset: dey, qty: 41_987, amount: 37_251_312, date: '2023-01-23')
+
+print_log('1401/11/03')
 
 # Bahman 10
 Rate.create(asset: pelask, price: 3629, date: '2023-01-30')
@@ -126,6 +175,8 @@ Rate.create(asset: kerman, price: 1269, date: '2023-01-30')
 Rate.create(asset: dey, price: 856, date: '2023-01-30')
 Investment.create(amount: 36_000_000, date: '2023-01-30', user: zhynura)
 Transaction.create(asset: dey, qty: 41_516, amount: 36_000_100, date: '2023-01-30')
+
+print_log('1401/11/10')
 
 # Esfand 22
 Rate.create(asset: pelask, price: 4128, date: '2023-01-17')
@@ -146,11 +197,14 @@ Investment.create(amount: 10_000_000, date: '2023-03-13', user: somayeh_kh)
 
 Transaction.create(asset: dey, qty: 61_203, amount: 50_000_173, date: '2023-03-13')
 
+print_log('1401/12/11')
 
 # Esfand 28
 Rate.create(asset: pelask, price: 4511, date: '2023-03-19')
 Rate.create(asset: kerman, price: 1236, date: '2023-03-19')
 Rate.create(asset: dey, price: 889, date: '2023-03-19')
+
+print_log('1401/12/28')
 
 # Farvardin 5
 Rate.create(asset: pelask, price: 4500, date: '2023-03-25')
@@ -159,11 +213,16 @@ Rate.create(asset: dey, price: 935, date: '2023-03-25')
 Investment.create(amount: 200_000_000, date: '2023-03-25', user: somayeh_kh)
 Transaction.create(asset: dana, qty: 65_054, amount: 200_000_053, date: '2023-03-25')
 
+print_log('1402/01/05')
+
 # Farvardin 16
 Rate.create(asset: pelask, price: 5571, date: '2023-04-05')
 Rate.create(asset: kerman, price: 1466, date: '2023-04-05')
 Rate.create(asset: dey, price: 1119, date: '2023-04-05')
 Rate.create(asset: dana, price: 3470, date: '2023-04-05')
+
+print_log('1402/01/16')
+
 
 # Farvardin 21
 Transaction.create(asset: dana, qty: -65_054, amount: -263_278_065, date: '2023-04-10')
@@ -173,10 +232,14 @@ Rate.create(asset: dey, price: 1137, date: '2023-04-10')
 Investment.create(amount: -54_958_362, date: '2023-04-10', user: amir_hosein)
 Investment.create(amount: -208_319_817, date: '2023-04-10', user: naghmeh)
 
+print_log('1402/01/21')
+
 # Farvardin 26
 Rate.create(asset: pelask, price: 6100, date: '2023-04-15')
 Rate.create(asset: kerman, price: 1605, date: '2023-04-15')
 Rate.create(asset: dey, price: 1148, date: '2023-04-15')
+
+print_log('1402/01/26')
 
 # Farvardin 28 
 Rate.create(asset: pelask, price: 6700, date: '2023-04-17')
@@ -185,13 +248,18 @@ Rate.create(asset: dey, price: 1244, date: '2023-04-17')
 Investment.create(amount: 20_000_000, date: '2023-04-17', user:masoumeh )
 Transaction.create(asset: energy3, qty: 315, amount: 19_953_442, date: '2023-04-17')
 
+print_log('1402/01/28')
+
 # Farvardin 29
-Transaction.create(asset: energy3, qty: -315, amount: 20_552_945, date: '2023-04-18')
+Transaction.create(asset: energy3, qty: -315, amount: -20_552_945, date: '2023-04-18')
 Rate.create(asset: pelask, price: 6700, date: '2023-04-18')
 Rate.create(asset: kerman, price: 1745, date: '2023-04-18')
 Rate.create(asset: dey, price: 1306, date: '2023-04-18')
 Investment.create(amount: 30_000_000, date: '2023-04-18', user:masoumeh )
 Transaction.create(asset: deloghma, qty: 12_940, amount: 50_596_904, date: '2023-04-18')
+
+print_log('1402/01/29')
+
 
 # Ordibehesht 4
 Rate.create(asset: pelask, price: 6700, date: '2023-04-24')
@@ -201,6 +269,9 @@ Rate.create(asset: deloghma, price: 3810, date: '2023-04-24')
 Investment.create(amount: 15_000_000, date: '2023-04-24', user:selena )
 Investment.create(amount: 8_000_000, date: '2023-04-24', user:arian )
 Transaction.create(asset: deloghma, qty: 3_970, amount: 14_994_562, date: '2023-04-24')
+
+print_log('1402/02/04')
+
 
 # Ordibehesht 9
 Rate.create(asset: pelask, price: 6580, date: '2023-04-29')
@@ -216,3 +287,4 @@ Transaction.create(asset: ghegol, qty: 37_520, amount: 207_639_014, date: '2023-
 Rate.create(asset: kegol, price: 7890, date: '2023-04-29')
 Rate.create(asset: ghegol, price: 5580, date: '2023-04-29')
 
+print_log('1402/02/09')
