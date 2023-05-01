@@ -37,6 +37,7 @@ end
 puts 'Defining users ...'
 
 behnam = User.create(email:'b@y.com', full_name: 'بهنام آقاعلی', password: '123456')
+behnam_shakhes = User.create(email:'b2@y.com', full_name: 'بهنام آقاعلی - شاخص', password: '123456')
 naghmeh = User.create(email:'a2@b.c', full_name: 'نغمه قزلباش', password: '123456')
 masoumeh = User.create(email:'a3@b.c', full_name: 'معصومه قزلباش', password: '123456')
 maman_bozorg = User.create(email:'a4@b.c', full_name: 'مامان بزرگ', password: '123456')
@@ -78,7 +79,8 @@ kegol = Asset.create(title: 'کگل')
 # Operations
 puts 'Adding Operations ... '
 
-Investment.create(amount: 19_517_652, date: '2022-03-21', user: behnam)
+Investment.create(amount: 9_517_652, date: '2022-03-21', user: behnam)
+Investment.create(amount: 10_000_000, date: '2022-03-21', user: behnam_shakhes)
 Investment.create(amount: 389_805_972, date: '2022-03-21', user: naghmeh)
 Investment.create(amount: 21_046_357, date: '2022-03-21', user: masoumeh)
 Investment.create(amount: 78_022_364, date: '2022-03-21', user: maman_bozorg)
