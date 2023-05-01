@@ -245,7 +245,7 @@ print_log('1402/01/26')
 Rate.create(asset: pelask, price: 6700, date: '2023-04-17')
 Rate.create(asset: kerman, price: 1752, date: '2023-04-17')
 Rate.create(asset: dey, price: 1244, date: '2023-04-17')
-Investment.create(amount: 20_000_000, date: '2023-04-17', user:masoumeh )
+Investment.create(amount: 20_000_000, date: '2023-04-17', user:shahram )
 Transaction.create(asset: energy3, qty: 315, amount: 19_953_442, date: '2023-04-17')
 
 print_log('1402/01/28')
@@ -255,7 +255,7 @@ Transaction.create(asset: energy3, qty: -315, amount: -20_552_945, date: '2023-0
 Rate.create(asset: pelask, price: 6700, date: '2023-04-18')
 Rate.create(asset: kerman, price: 1745, date: '2023-04-18')
 Rate.create(asset: dey, price: 1306, date: '2023-04-18')
-Investment.create(amount: 30_000_000, date: '2023-04-18', user:masoumeh )
+Investment.create(amount: 30_000_000, date: '2023-04-18', user:shahram )
 Transaction.create(asset: deloghma, qty: 12_940, amount: 50_596_904, date: '2023-04-18')
 
 print_log('1402/01/29')
@@ -280,11 +280,34 @@ Rate.create(asset: dey, price: 1544, date: '2023-04-29')
 Rate.create(asset: deloghma, price: 4050, date: '2023-04-29')
 Investment.create(amount: 32_000_000, date: '2023-04-29', user: zhynura)
 Investment.create(amount: 30_634_782, date: '2023-04-29', user:naghmeh )
-Investment.create(amount: 58_393_583, date: '2023-04-29', user:maman_bozorg )
-Investment.create(amount: 118_610_649, date: '2023-04-29', user:shahram )
+Investment.create(amount: 177_004_232, date: '2023-04-29', user:shahram )
 Transaction.create(asset: kegol, qty: 5_039, amount: 40_006_435, date: '2023-04-29')
 Transaction.create(asset: ghegol, qty: 37_520, amount: 207_639_014, date: '2023-04-29')
 Rate.create(asset: kegol, price: 7890, date: '2023-04-29')
 Rate.create(asset: ghegol, price: 5580, date: '2023-04-29')
 
 print_log('1402/02/09')
+
+
+# Ordibehesht 10
+
+Rate.create(asset: pelask, price: 6900, date: '2023-04-30')
+Rate.create(asset: kerman, price: 1799, date: '2023-04-30')
+Rate.create(asset: dey, price: 1621, date: '2023-04-30')
+Rate.create(asset: deloghma, price: 4252, date: '2023-04-30')
+Rate.create(asset: kegol, price: 7860, date: '2023-04-30')
+Rate.create(asset: ghegol, price: 5500, date: '2023-04-30')
+Investment.create(amount: 5_000_000, date: '2023-04-30', user: noushin)
+
+print_log('1402/02/10')
+
+# Ordibehesht 11
+
+Rate.create(asset: pelask, price: 7230, date: '2023-05-01')
+Rate.create(asset: kerman, price: 1789, date: '2023-05-01')
+Rate.create(asset: dey, price: 1702, date: '2023-05-01')
+Rate.create(asset: deloghma, price: 4076, date: '2023-05-01')
+Rate.create(asset: kegol, price: 7720, date: '2023-05-01')
+Rate.create(asset: ghegol, price: 5550, date: '2023-05-01')
+
+print_log('1402/02/11')
