@@ -326,3 +326,14 @@ Rate.create(asset: ghegol, price: 5790, date: '2023-05-03')
 Investment.create(amount: -273_937_692, date: '2023-04-30', user: naghmeh)
 
 print_log('1402/02/13')
+
+
+# Ordibehesht 16
+
+Rate.create(asset: pelask, price: 7860, date: '2023-05-06')
+Rate.create(asset: kerman, price: 1932, date: '2023-05-06')
+Rate.create(asset: deloghma, price: 3989, date: '2023-05-06')
+Rate.create(asset: kegol, price: 7730, date: '2023-05-06')
+Rate.create(asset: ghegol, price: 5700, date: '2023-05-06')
+
+print_log('1402/02/16')
