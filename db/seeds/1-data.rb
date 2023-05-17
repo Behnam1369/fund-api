@@ -337,3 +337,14 @@ Rate.create(asset: kegol, price: 7730, date: '2023-05-06')
 Rate.create(asset: ghegol, price: 5700, date: '2023-05-06')
 
 print_log('1402/02/16')
+
+
+# Ordibehesht 27
+
+Rate.create(asset: pelask, price: 7160, date: '2023-05-17')
+Rate.create(asset: kerman, price: 1692, date: '2023-05-17')
+Rate.create(asset: deloghma, price: 3470, date: '2023-05-17')
+Rate.create(asset: kegol, price: 7180, date: '2023-05-17')
+Rate.create(asset: ghegol, price: 4890, date: '2023-05-17')
+
+print_log('1402/02/27')
