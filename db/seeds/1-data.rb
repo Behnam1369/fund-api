@@ -346,5 +346,43 @@ Rate.create(asset: kerman, price: 1692, date: '2023-05-17')
 Rate.create(asset: deloghma, price: 3470, date: '2023-05-17')
 Rate.create(asset: kegol, price: 7180, date: '2023-05-17')
 Rate.create(asset: ghegol, price: 4890, date: '2023-05-17')
+Investment.create(amount: 26_712_900, date: '2023-05-17', user: sedigheh)
 
 print_log('1402/02/27')
+
+
+# Khordad 6
+Rate.create(asset: pelask, price: 8610, date: '2023-05-27')
+Rate.create(asset: kerman, price: 1550, date: '2023-05-27')
+Rate.create(asset: deloghma, price: 3636, date: '2023-05-27')
+Rate.create(asset: kegol, price: 6720, date: '2023-05-27')
+Rate.create(asset: ghegol, price: 4385, date: '2023-05-27')
+Investment.create(amount: 7_000_000, date: '2023-05-27', user: noushin)
+
+print_log('1402/03/06')
+
+
+# Khordad 8
+Rate.create(asset: pelask, price: 9460, date: '2023-05-29')
+Rate.create(asset: kerman, price: 1661, date: '2023-05-29')
+Rate.create(asset: deloghma, price: 3620, date: '2023-05-29')
+Rate.create(asset: kegol, price: 6730, date: '2023-05-29')
+Rate.create(asset: ghegol, price: 4330, date: '2023-05-29')
+Investment.create(amount: 50_000_000, date: '2023-05-29', user: shahram)
+
+
+print_log('1402/03/08')
+
+
+# Khordad 10
+Rate.create(asset: pelask, price: 10400, date: '2023-05-31')
+Rate.create(asset: kerman, price: 1638, date: '2023-05-31')
+Rate.create(asset: deloghma, price: 3454, date: '2023-05-31')
+Rate.create(asset: kegol, price: 6900, date: '2023-05-31')
+Rate.create(asset: ghegol, price: 4221, date: '2023-05-31')
+Transaction.create(asset: pelask, qty: -47_126, amount: -485_797_435, date: '2023-05-31')
+Investment.create(amount: 6_287_100, date: '2023-05-31', user: behnam)
+Transaction.create(asset: dey, qty: 386_572, amount: 575_796_840, date: '2023-05-31')
+Rate.create(asset: dey, price: 1484, date: '2023-05-31')
+
+print_log('1402/03/10')
