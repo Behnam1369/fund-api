@@ -386,3 +386,13 @@ Transaction.create(asset: dey, qty: 386_572, amount: 575_796_840, date: '2023-05
 Rate.create(asset: dey, price: 1484, date: '2023-05-31')
 
 print_log('1402/03/10')
+
+
+# Tir 14
+Rate.create(asset: kerman, price: 1542, date: '2023-07-05')
+Rate.create(asset: deloghma, price: 3839, date: '2023-07-05')
+Rate.create(asset: kegol, price: 7330, date: '2023-07-05')
+Rate.create(asset: ghegol, price: 4212, date: '2023-07-05')
+Rate.create(asset: dey, price: 1395, date: '2023-07-05')
+
+print_log('1402/04/14')
