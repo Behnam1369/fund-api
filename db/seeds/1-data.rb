@@ -406,3 +406,35 @@ Rate.create(asset: ghegol, price: 3679, date: '2023-07-23')
 Rate.create(asset: dey, price: 1096, date: '2023-07-23')
 
 print_log('1402/05/01')
+
+
+# Mordad 3
+Rate.create(asset: kerman, price: 1254, date: '2023-07-25')
+Rate.create(asset: deloghma, price: 3816, date: '2023-07-25')
+Rate.create(asset: kegol, price: 5780, date: '2023-07-25')
+Rate.create(asset: ghegol, price: 3800, date: '2023-07-25')
+Rate.create(asset: dey, price: 1207, date: '2023-07-25')
+Investment.create(amount: 4_389_382, date: '2023-07-25', user: behnam)
+
+print_log('1402/05/03')
+
+
+# Mordad 15
+Rate.create(asset: kerman, price: 1259, date: '2023-08-06')
+Rate.create(asset: deloghma, price: 3680, date: '2023-08-06')
+Rate.create(asset: kegol, price: 6040, date: '2023-08-06')
+Rate.create(asset: ghegol, price: 3780, date: '2023-08-06')
+Rate.create(asset: dey, price: 1173, date: '2023-08-06')
+Investment.create(amount: 27_908_858, date: '2023-08-06', user: behnam)
+
+print_log('1402/05/15')
+
+
+# Shahrivar 22
+Rate.create(asset: kerman, price: 1240, date: '2023-09-13')
+Rate.create(asset: deloghma, price: 3565, date: '2023-09-13')
+Rate.create(asset: kegol, price: 6300, date: '2023-09-13')
+Rate.create(asset: ghegol, price: 3899, date: '2023-09-13')
+Rate.create(asset: dey, price: 1150, date: '2023-09-13')
+
+print_log('1402/06/22')
