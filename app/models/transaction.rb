@@ -10,6 +10,6 @@ class Transaction < ApplicationRecord
     ass.amount = ass.qty * ass.price
     ass.save
 
-    Rate.new(asset: ass, date:, price: (amount / 1.05) / qty).save
+    Rate.new(asset: ass, price: (amount / 1.05) / qty).save
   end
 end
