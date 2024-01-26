@@ -448,3 +448,13 @@ Rate.create(asset: ghegol, price: 3672, date: '2023-11-08')
 Rate.create(asset: dey, price: 1057, date: '2023-11-08')
 
 print_log('1402/08/17')
+
+
+# Bahman 6
+Rate.create(asset: kerman, price: 1251, date: '2024-01-26')
+Rate.create(asset: deloghma, price: 3062, date: '2024-01-26')
+Rate.create(asset: kegol, price: 5130, date: '2024-01-26')
+Rate.create(asset: ghegol, price: 3356, date: '2024-01-26')
+Rate.create(asset: dey, price: 1150, date: '2024-01-26')
+
+print_log('1402/11/06')
